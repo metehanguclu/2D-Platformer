@@ -6,8 +6,13 @@ public class PlayerController : MonoBehaviour
 {
     private float movementInputDirection;
     private float jumpTimer;
+    private float dashTimeLeft;
+    private float lastImageXpos;
+    private float lastDash = -100f;
+
 
     private int amountOfJumpsLeft;
+    private int facingDirection = 1;
 
     private bool isFacingRight = true;
     private bool isWalking;
@@ -16,9 +21,13 @@ public class PlayerController : MonoBehaviour
     private bool isWallSliding;
     private bool canJump;
     private bool isAttemptingToJump;
+    private bool CheckJumpMultiplier;
+    private bool canMove = true;
+    private bool canFlip;
     private bool isTouchingLedge;
     private bool canClimbLedge = false;
     private bool ledgeDetected;
+    private bool isDashing;
 
     private Vector2 ledgePosBot;
     private Vector2 ledgePos1;
@@ -43,6 +52,10 @@ public class PlayerController : MonoBehaviour
     public float ledgeClimbYOffset1 = 0f;
     public float ledgeClimbXOffset2 = 0f;
     public float ledgeClimbYOffset2 = 0f;
+    public float dashTime;
+    public float dashSpeed;
+    public float distanceBetweenImages;
+    public float dashCoolDown;
 
     public Transform groundCheck;
     public Transform wallCheck;
@@ -68,6 +81,7 @@ public class PlayerController : MonoBehaviour
         CheckIfWallSliding();
         CheckJump();
         CheckLedgeClimb();
+        CheckDash();
     }
 
     private void FixedUpdate()
@@ -106,8 +120,8 @@ public class PlayerController : MonoBehaviour
                 ledgePos2 = new Vector2(Mathf.Ceil(ledgePosBot.x - wallCheckDistance) - ledgeClimbXOffset2, Mathf.Floor(ledgePosBot.y) + ledgeClimbYOffset2);
             }
 
-            //canMove = false;
-            //canFlip = false;
+            canMove = false;
+            canFlip = false;
 
             anim.SetBool("canClimbLedge", canClimbLedge);
         }
@@ -122,8 +136,8 @@ public class PlayerController : MonoBehaviour
     {
         canClimbLedge = false;
         transform.position = ledgePos2;
-        //canMove = false;
-        //canFlip = false;
+        canMove = true;
+        canFlip = true;
         ledgeDetected = false;
         anim.SetBool("canClimbLedge", canClimbLedge);
     }
@@ -204,11 +218,66 @@ public class PlayerController : MonoBehaviour
                 isAttemptingToJump = true;
             }
         }
-
-        /*if(Input.GetButtonUp("Jump"))
+        
+        if(CheckJumpMultiplier && !Input.GetButton("Jump"))
         {
+            CheckJumpMultiplier = false;
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * variableJumpHeightMultiplier);
-        }*/
+        }
+
+        if(Input.GetButtonDown("Dash"))
+        {
+            if(Time.time >= (lastDash + dashCoolDown))
+            AttemptToDash();
+        }
+
+    }
+
+    public int GetFacingDirection()
+    {
+        return facingDirection;
+    }
+
+    private void AttemptToDash()
+    {
+        if(isGrounded)
+        {
+            isDashing = true;
+            dashTimeLeft = dashTime;
+            lastDash = Time.time;
+
+            PlayerAfterImagePool.Instance.GetFromPool();
+            lastImageXpos = transform.position.x;
+        }
+        
+    }
+
+    private void CheckDash()
+    {
+        if(isDashing)
+        {
+            if(dashTimeLeft > 0)
+            {
+                canMove = false;
+                canFlip = false;
+                 rb.velocity = new Vector2(dashSpeed * facingDirection, rb.velocity.y);
+                 dashTimeLeft -= Time.deltaTime;
+
+                 if(Mathf.Abs(transform.position.x - lastImageXpos) > distanceBetweenImages)
+                {
+                    PlayerAfterImagePool.Instance.GetFromPool();
+                    lastImageXpos = transform.position.x; 
+                }
+            }
+
+            if(dashTimeLeft <= 0 || isTouchingWall)
+            {
+                isDashing = false;
+                canMove = true;
+                canFlip = true;
+            }
+            
+        }
     }
 
     private void CheckJump()
@@ -245,7 +314,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x * airDragMultiplier, rb.velocity.y);
         }
-        else
+        else if(canMove)
         {
             rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
         }
@@ -273,8 +342,9 @@ public class PlayerController : MonoBehaviour
     {   
         if(!isWallSliding)
         {
-        isFacingRight = !isFacingRight;
-        transform.Rotate(0.0f, 180.0f, 0.0f);
+            facingDirection *= -1;
+            isFacingRight = !isFacingRight;
+            transform.Rotate(0.0f, 180.0f, 0.0f);
         }
     }
 
