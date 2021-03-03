@@ -102,6 +102,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public bool GetDashStatus()
+    {
+        return isDashing;
+    }
+
     private void CheckLedgeClimb()
     {
         if(ledgeDetected && !canClimbLedge)
@@ -260,7 +265,7 @@ public class PlayerController : MonoBehaviour
             {
                 canMove = false;
                 canFlip = false;
-                 rb.velocity = new Vector2(dashSpeed * facingDirection, rb.velocity.y);
+                 rb.velocity = new Vector2(dashSpeed * facingDirection, 0.0f);
                  dashTimeLeft -= Time.deltaTime;
 
                  if(Mathf.Abs(transform.position.x - lastImageXpos) > distanceBetweenImages)
@@ -336,6 +341,16 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
             }
         }
+    }
+
+    public void DisableFlip()
+    {
+        canFlip = false;
+    }
+
+    public void EnableFlip()
+    {
+        canFlip = true;
     }
 
     private void Flip()
