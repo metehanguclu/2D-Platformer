@@ -1,0 +1,536 @@
+fileFormatVersion: 2
+guid: e1ec8ac20fac9234fae6d837ea02ad0c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7393412855155037228
+    second: blood_-_left_1_0_0
+  - first:
+      213: 1215591567850396607
+    second: blood_-_left_1_0_1
+  - first:
+      213: -7117696210150098620
+    second: blood_-_left_1_0_2
+  - first:
+      213: 6098684310215823586
+    second: blood_-_left_1_0_3
+  - first:
+      213: -6910928961440011507
+    second: blood_-_left_1_0_5
+  - first:
+      213: -741322971900822474
+    second: blood_-_left_1_0_7
+  - first:
+      213: 6225415796194031371
+    second: blood_-_left_1_0_8
+  - first:
+      213: -2603655397761199401
+    second: blood_-_left_1_0_9
+  - first:
+      213: -8971751042716575495
+    second: blood_-_left_1_0_10
+  - first:
+      213: -4555086814224362596
+    second: blood_-_left_1_0_13
+  - first:
+      213: 6200971108509964222
+    second: blood_-_left_1_0_15
+  - first:
+      213: -4730356899570893500
+    second: blood_-_left_1_0_16
+  - first:
+      213: 4596146092207181621
+    second: blood_-_left_1_0_18
+  - first:
+      213: -4740097666195387962
+    second: blood_-_left_1_0_20
+  - first:
+      213: -1396225815716810136
+    second: blood_-_left_1_0_21
+  - first:
+      213: 4584548725192520025
+    second: blood_-_left_1_0_22
+  - first:
+      213: -848889090093077671
+    second: blood_-_left_1_0_24
+  - first:
+      213: -2456278824501925131
+    second: blood_-_left_1_0_25
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 104
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: blood_-_left_1_0_0
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 1784
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c24925dd1ddaa9660800000000000000
+      internalID: 7393412855155037228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_-_left_1_0_1
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 1728
+        width: 112
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbbdea92716aed010800000000000000
+      internalID: 1215591567850396607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_-_left_1_0_2
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1720
+        width: 176
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 449fbde020dd83d90800000000000000
+      internalID: -7117696210150098620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_-_left_1_0_3
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 1720
+        width: 272
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e099a36111e2a450800000000000000
+      internalID: 6098684310215823586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_-_left_1_0_5
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1192
+        width: 344
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0ba869a9b27710a0800000000000000
+      internalID: -6910928961440011507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_-_left_1_0_7
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1192
+        width: 320
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63cb30c4faa46b5f0800000000000000
+      internalID: -741322971900822474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_-_left_1_0_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1184
+        width: 336
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b073047deae156650800000000000000
+      internalID: 6225415796194031371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_-_left_1_0_9
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1192
+        width: 344
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d25ae2e535fddbd0800000000000000
+      internalID: -2603655397761199401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_-_left_1_0_10
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 1176
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f853a506ffed7380800000000000000
+      internalID: -8971751042716575495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_-_left_1_0_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 680
+        width: 344
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9357152da419c0c0800000000000000
+      internalID: -4555086814224362596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_-_left_1_0_15
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 680
+        width: 328
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb752397e564e0650800000000000000
+      internalID: 6200971108509964222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_-_left_1_0_16
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 680
+        width: 304
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44d324c56756a5eb0800000000000000
+      internalID: -4730356899570893500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_-_left_1_0_18
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 680
+        width: 328
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53f0fc9f48ac8cf30800000000000000
+      internalID: 4596146092207181621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_-_left_1_0_20
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 664
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c904c5694ac73eb0800000000000000
+      internalID: -4740097666195387962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_-_left_1_0_21
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 168
+        width: 312
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86238f3a40c9f9ce0800000000000000
+      internalID: -1396225815716810136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_-_left_1_0_22
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 168
+        width: 320
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 951f19c86c69f9f30800000000000000
+      internalID: 4584548725192520025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_-_left_1_0_24
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 160
+        width: 328
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95b2c43ced32834f0800000000000000
+      internalID: -848889090093077671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_-_left_1_0_25
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 160
+        width: 336
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5faaf3c4c6b89edd0800000000000000
+      internalID: -2456278824501925131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
