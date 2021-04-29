@@ -26,18 +26,23 @@ public class PlayerCombatController : MonoBehaviour
     private PlayerController PC;
     private PlayerStats PS;
 
+    //public float CamShakeAmt = 0.1f;
+    //CameraShake camShake;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
         anim.SetBool("canAttack", combatEnabled);
         PC = GetComponent<PlayerController>();
         PS = GetComponent<PlayerStats>();
+        //camShake = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>().GetComponent<CameraShake>();
     }
 
     private void Update()
     {
         CheckCombatInput();
         CheckAttacks();
+        
     }
 
     private void CheckCombatInput()
@@ -65,6 +70,7 @@ public class PlayerCombatController : MonoBehaviour
                 anim.SetBool("attack1", true);
                 anim.SetBool("firstAttack", isFirstAttack);
                 anim.SetBool("isAttacking", isAttacking);
+                
             }
         }
         if(Time.time >= lastInputTime + inputTimer)
@@ -80,6 +86,7 @@ public class PlayerCombatController : MonoBehaviour
         attackDetails.damageAmount = attack1Damage;
         attackDetails.position = transform.position;
         attackDetails.stunDamageAmount = stunDamageAmount;
+        //camShake.Shake(CamShakeAmt, 0.1f);
 
 
         foreach (Collider2D collider in detectedObjects)
@@ -101,6 +108,9 @@ public class PlayerCombatController : MonoBehaviour
         {
             int direction;
 
+            //anim.SetBool("hurt", true);
+            anim.SetTrigger("phurt");
+
             PS.DecreaseHealth(attackDetails.damageAmount);
 
             if(attackDetails.position.x < transform.position.x)
@@ -113,6 +123,7 @@ public class PlayerCombatController : MonoBehaviour
             }
 
             PC.Knockback(direction);
+
         }
         
     }

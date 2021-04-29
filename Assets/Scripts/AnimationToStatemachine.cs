@@ -15,4 +15,9 @@ public class AnimationToStatemachine : MonoBehaviour
     {
         attackState.FinishAttack();
     }
+
+    private void FinishDeath()
+    {
+        gameObject.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+    }
 }

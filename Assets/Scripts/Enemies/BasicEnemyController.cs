@@ -153,7 +153,8 @@ public class BasicEnemyController : MonoBehaviour
     {
         //Instantiate(deathChunkParticle, alive.transform.position, deathChunkParticle.transform.rotation);
         //Instantiate(deathBloodParticle, alive.transform.position, deathBloodParticle.transform.rotation);
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        aliveAnim.SetBool("dead", true);
     }
 
     private void UpdateDeadState()
@@ -163,7 +164,7 @@ public class BasicEnemyController : MonoBehaviour
 
     private void ExitDeadState()
     {
-
+        aliveAnim.SetBool("dead", false);
     }
 
     //---------------
@@ -172,7 +173,9 @@ public class BasicEnemyController : MonoBehaviour
     {
         currentHealth -= attackDetails[0];
 
-        Instantiate(hitParticle, alive.transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)));
+        Instantiate(hitParticle, alive.transform.position, Quaternion.Euler(0, 0, 0));
+
+        aliveAnim.SetTrigger("ehurt");
 
         if(attackDetails[1] > alive.transform.position.x)
         {

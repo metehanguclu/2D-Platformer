@@ -33,7 +33,12 @@ public class Enemy1 : Entity
     private Transform meleeAttackPosition;
 
     [SerializeField]
-    private GameObject aliveE;
+    private Animator enemyAnim;
+
+    private GameObject aliveEnemy;
+
+    public float CamShakeAmt = 0.1f;
+    CameraShake camShake;
 
     public override void Start()
     {
@@ -47,11 +52,14 @@ public class Enemy1 : Entity
         meleeAttackState = new E1_MeleeAttackState(this, stateMachine, "meleeAttack", meleeAttackPosition, meleeAttackStateData, this);
         stunState = new E1_StunState(this, stateMachine, "stun", stunStateData, this);
         deadState = new E1_DeadState(this, stateMachine, "dead", deadStateData, this);
-        
-        aliveE = transform.Find("Alive").gameObject; 
+
+        aliveEnemy = transform.Find("Alive").gameObject;
+        enemyAnim = aliveEnemy.GetComponent<Animator>();
+        aliveGO.SetActive(true);
 
         stateMachine.Initialize(moveState);
-       
+
+        camShake = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>().GetComponent<CameraShake>();
     }
 
     public override void OnDrawGizmos()
@@ -63,15 +71,23 @@ public class Enemy1 : Entity
     public override void Damage(AttackDetails attackDetails)
     {
         base.Damage(attackDetails);
+        camShake.Shake(CamShakeAmt, 0.1f);
+
+        enemyAnim.SetTrigger("ehurt");
 
         if (isDead)
         {
             stateMachine.ChangeState(deadState);
-            Destroy(gameObject);
+            enemyAnim.SetBool("dead", true);
+
+            Object.Destroy(gameObject, 10.0f);
         }
         else if (isStunned && stateMachine.currentState != stunState)
         {
             stateMachine.ChangeState(stunState);
-        }        
+        }  
     }
 }
+
+ 
+ 

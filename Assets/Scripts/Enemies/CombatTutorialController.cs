@@ -71,7 +71,6 @@ public class CombatTutorialController : MonoBehaviour
             playerOnCombat = true;
         }
 
-        aliveAnim.SetBool("PlayerOnCombat", playerOnCombat);
         aliveAnim.SetTrigger("damage");
 
         if(applyKnockback && currentHealth > 0.0f)
